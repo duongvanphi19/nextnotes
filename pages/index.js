@@ -3,12 +3,12 @@ import {
    Heading
 } from '@chakra-ui/react'
 
-import { Editor } from '../components/editor'
+import { MyEditor } from '../components/editor'
 export default function Home() {
    return (
       <Container>
          <Heading >This is Chakra UI Heading</Heading>
-      <Editor/>
+      <MyEditor/>
       </Container>
    )
 }

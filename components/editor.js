@@ -1,17 +1,17 @@
 import {useState, useEffect} from 'react'
-import {Editor as Draft} from 'react-draft-wysiwyg'
-import {EdittorState} from 'draft-js'
+import {Editor} from 'react-draft-wysiwyg'
+import {edittorState} from 'draft-js'
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 
-export default function Editor() {
+export default function MyEditor() {
    const [editorState, setEditorState] = useState(() =>
-      EditorState.createEmpty()
+      editorState.createEmpty()
    );
    useEffect(() => {
       console.log(editorState);
    }, [editorState]);
    return (
-      <Draft
+      <Editor
          editorState={editorState}
          onEditorStateChange={setEditorState}
       />
