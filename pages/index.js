@@ -1,12 +1,11 @@
-import Head from 'next/head'
+import {
+   Box
+} from '@chakra-ui/react'
+
 export default function Home() {
   return (
-     <>
-     <Head>
-        <title>My page title</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link rel="icon" type="image/x-icon" href="/images/favicon.ico"/>
-     </Head>
-     </>
+     <Box>
+         <Heading >This is Chakra UI Heading</Heading>
+     </Box>
       )
 }
