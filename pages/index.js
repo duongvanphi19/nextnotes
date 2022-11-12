@@ -3,12 +3,13 @@ import {
    Heading
 } from '@chakra-ui/react'
 
-import MyEditor from '../components/editor'
+import MyEditor {editorState, contentState} from '../components/editor'
 export default function Home() {
    return (
       <Container>
-         <Heading >This is Chakra UI Heading</Heading>
+         <Heading mb={6}>Editor</Heading>
       <MyEditor/>
+      <textarea>{JSON.stringify(contentState, null, 3)}</textarea>
       </Container>
    )
 }

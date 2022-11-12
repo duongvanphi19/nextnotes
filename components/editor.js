@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
 import {EditorState} from 'draft-js'
+import { convertFromRaw } from 'draft-js';
 import dynamic from 'next/dynamic'
 const Editor = dynamic(() => import('react-draft-wysiwyg').then(mod => mod.Editor), {ssr: false})
 
@@ -9,6 +10,8 @@ export default function MyEditor() {
    const [editorState, setEditorState] = useState(() =>
       EditorState.createEmpty()
    );
+   const [contentState, setContentState] = useState(convertFromRaw({}))
+
    useEffect(() => {
       console.log(editorState);
    }, [editorState]);
@@ -16,8 +19,10 @@ export default function MyEditor() {
       <Editor
          editorState={editorState}
          onEditorStateChange={setEditorState}
+         onContentStateChange={setContentState}
       />
 
    );
 }
 
+export {editorState, contentState}
