@@ -1,6 +1,8 @@
 import {useState, useEffect} from 'react'
-import {Editor} from 'react-draft-wysiwyg'
 import {EditorState} from 'draft-js'
+import dynamic from 'next/dynamic'
+const Editor = dynamic(() => import('react-draft-wysiwyg').then(mod => mod.Editor), {ssr: false})
+
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css'
 
 export default function MyEditor() {
