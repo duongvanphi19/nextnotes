@@ -3,7 +3,7 @@ import {
    Heading
 } from '@chakra-ui/react'
 
-import { MyEditor } from '../components/editor'
+import MyEditor from '../components/editor'
 export default function Home() {
    return (
       <Container>
