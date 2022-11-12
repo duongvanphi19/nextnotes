@@ -20,7 +20,6 @@ export default function Home() {
       <Editor 
       onContentStateChange={setContentState}
       />
-      <textarea>{JSON.stringify(contentState, null, 3)}</textarea>
       </Container>
    )
 }
